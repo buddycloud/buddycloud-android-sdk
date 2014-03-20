@@ -11,11 +11,10 @@ Buddycloud Android SDK developed is the first SDK that allows developers to easi
 
 ## Set-up
 
- 1. Create a Coinbase account and Register an App
- 2. `git clone git@github.com:buddycloud/buddycloud-android-sdk.git`
- 3.	Import the code into your Android Workspace: File > Import... > Android > Existing Code into Android Workspace
- 4.	Add the Buddycloud project as a library project to the App that you wish to Buddycloud enable: Properties > Android > Library > Add
- 5. Add the following two lines of code in your manifest file
+1. `git clone git@github.com:buddycloud/buddycloud-android-sdk.git`
+2. Import the code into your Android Workspace: File > Import... > Android > Existing Code into Android Workspace
+3. Add the Buddycloud project as a library project to the App that you wish to Buddycloud enable: Properties > Android > Library > Add
+4. Add the following two lines of code in your manifest file
 
 ```xml
 <activity android:name="com.buddycloud.sdk......"
@@ -27,7 +26,6 @@ Buddycloud Android SDK developed is the first SDK that allows developers to easi
 1. Initialize the SDK, when you initialize your app using the `initialize` API call
 2. Set the buddycloud account using the `setBudd......` API call
 ...
-
 
 ## Testing
 
