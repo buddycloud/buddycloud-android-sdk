@@ -2,6 +2,10 @@
 
 ##Setup
 
+> **Notice:** This Setup section is incomplete.
+  * **Not sure** if the best approach is having them clone the repo and link as a Library or having them download the SDK as a .jar and unzip it into the project's `libs` folder.
+  * **Definitely not sure** about the required lines in the AndroidManifest.xml, but I have a feeling that [this](https://parse.com/apps/quickstart#parse_push/android/existing) more accurately fits our needs.
+
 1. `git clone git@github.com:buddycloud/buddycloud-android-sdk.git`
 2. Import the code into your Android Workspace: `File` > `Import...` > `Android` > `Existing Code into Android Workspace`
 3. Add the Buddycloud project as a library project to the App that you wish to Buddycloud enable: `Properties` > `Android` > `Library` > `Add`
