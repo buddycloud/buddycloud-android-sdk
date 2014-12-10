@@ -29,7 +29,8 @@ Add the following broadcast receiver definition to `AndroidManifest.xml` immedia
 ```
 Make sure you change the `android:name` attribute of `<category>` element above to match your application's package name.
 
-> *Notice:* The receiver's configuration is not completely determined, as I'll need to dive deeper into the HTTP API's relationship with the Pusher service and how to properly configure clients to receive the push notifications from that service. This code snippet above is very much likely going to change.
+> #####DISCLAIMER ABOUT CODE SNIPPET ABOVE
+> The receiver's configuration is not completely determined, as we still need to dive deeper into the HTTP API's relationship with the Pusher service and how to properly configure clients to receive the push notifications from that service. This code snippet above is very much likely going to change.
 
 Then go ahead and add the permissions below, typically immediately before the opening `<application>` tag:
 
@@ -71,6 +72,7 @@ SDKs usually require API keys or Authentication tokens in this step, as well as 
 In Buddycloud's case, there's no need for API keys.
 You may want to hard-code and talk to a particular Buddycloud domain but you don't really have to know which domain you're talking to in order to get started.
 
+> #####THE THINKING BEHING THIS SECTION'S DECISIONS:
 > What kinds of configuration values you absolutely require in order to use Buddycloud and add messaging into your app?
 > What kinds of use case scenarios are out there?
 > 
