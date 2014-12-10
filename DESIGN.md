@@ -14,7 +14,7 @@ You will need to perform the following updates to your `AndroidManifest.xml`.
 Add the following broadcast receiver definition to `AndroidManifest.xml` immediately before the closing `</application>` tag:
 
 ```xml
-<receiver android:name="com.parse.GcmBroadcastReceiver"
+<receiver android:name="com.buddycloud.GcmBroadcastReceiver"
     android:permission="com.google.android.c2dm.permission.SEND">
   <intent-filter>
     <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -28,6 +28,8 @@ Add the following broadcast receiver definition to `AndroidManifest.xml` immedia
 </receiver>
 ```
 Make sure you change the `android:name` attribute of `<category>` element above to match your application's package name.
+
+> *Notice:* The receiver's configuration is not completely determined, as I'll need to dive deeper into the HTTP API's relationship with the Pusher service and how to properly configure clients to receive the push notifications from that service. This code snippet above is very much likely going to change.
 
 Then go ahead and add the permissions below, typically immediately before the opening `<application>` tag:
 
