@@ -44,8 +44,8 @@ Optionally, users can also define `BUDDYCLOUD_DOMAIN`, the Buddycloud domain the
 ```java
 public void onCreate() {
     BuddycloudConfiguration cfg = new BuddycloudConfiguration();
-    cfg.add(BuddycloudConfiguration.BUDDYCLOUD_DOMAIN, "your.own.bc.domain");
-    Buddycloud.initialize(this, cfg.build());
+    cfg.set(BuddycloudConfiguration.BUDDYCLOUD_DOMAIN, "your.own.bc.domain");
+    Buddycloud.initialize(this, cfg);
 }
 ```
 
@@ -56,13 +56,12 @@ Another optional advanced feature is to hard-code the `BUDDYCLOUD_API_ENDPOINT` 
 ```java
 public void onCreate() {
     BuddycloudAPIEndpoint apiEndpoint = new BuddycloudAPIEndpoint();
-    apiEndpoint.add(BuddycloudAPIEndpoint.PROTOCOL, "https");
-    apiEndpoint.add(BuddycloudAPIEndpoint.HOST, "your.own.bc.domain");
-    apiEndpoint.add(BuddycloudAPIEndpoint.PORT, 443);
-    apiEndpoint.add(BuddycloudAPIEndpoint.PATH, "/api");
-    apiEndpoint.add(BuddycloudAPIEndpoint.VERSION, "1.0");
+    apiEndpoint.setProtocol("https");          //Default is: http
+    apiEndpoint.setHost("your.own.bc.domain"); //Default is: buddycloud.org
+    apiEndpoint.setPort(443);                  //Default is: 80
+    apiEndpoint.setPath("/api");               //Default is: /api
     BuddycloudConfiguration cfg = new BuddycloudConfiguration();
-    cfg.add(BuddycloudConfiguration.BUDDYCLOUD_API_ENDPOINT, apiEndpoint.build());
-    Buddycloud.initialize(this, cfg.build());
+    cfg.set(BuddycloudConfiguration.BUDDYCLOUD_API_ENDPOINT, apiEndpoint.build());
+    Buddycloud.initialize(this, cfg);
 }
 ```
