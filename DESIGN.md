@@ -15,7 +15,7 @@
 
 You already have the SDK installed integrated into your project.
 Now you will configure it to fit your needs to the extent possible.
-SDKs usually require API keys or Authentication tokens in this step, as well as allow a series of handful configuration options.
+SDKs usually require API keys or Authentication tokens in this step, as well as a series of configuration options.
 In Buddycloud's case, there's no need for API keys.
 You may want to hard-code and talk to a particular Buddycloud domain but you don't really have to know which domain you're talking to in order to get started.
 
