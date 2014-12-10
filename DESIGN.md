@@ -14,7 +14,7 @@ You will need to perform the following updates to your `AndroidManifest.xml`.
 Add the following broadcast receiver definition to `AndroidManifest.xml` immediately before the closing `</application>` tag:
 
 ```xml
-<receiver android:name="com.buddycloud.GcmBroadcastReceiver"
+<receiver android:name="com.buddycloud.sdk.GcmBroadcastReceiver"
     android:permission="com.google.android.c2dm.permission.SEND">
   <intent-filter>
     <action android:name="com.google.android.c2dm.intent.RECEIVE" />
