@@ -74,14 +74,14 @@ You may want to hard-code and talk to a particular Buddycloud domain but you don
 > What kinds of configuration values you absolutely require in order to use Buddycloud and add messaging into your app?
 > What kinds of use case scenarios are out there?
 > 
-> Well, there are as many use cases as there are stars in the sky at night. But as it turns out, there's no single configuration value that is absolutely needed for a user to add messaging into their Buddycloud app, as we can always default communication to, say, `buddycloud.org`. Thus the SDK can use its API endpoint to pretty much do everything we need.
+> Well, there are as many use cases as there are stars in the sky at night. But as it turns out, there's no single configuration value that is absolutely needed for a user to add messaging into their Buddycloud app, as we can always default communication to, say, `buddycloud.com`. Thus the SDK can use its API endpoint to pretty much do everything we need.
 > 
 > The SDK users are the app developers themselves.
 > 
 > * Bear in mind that they might not know exactly what Buddycloud is.
 > * We're assuming their most basic need is to add messaging to their app. This has top priority.
 > 
-> With both points in mind, once the developer has properly integrated the SDK into their project, they MUST be good to go: no need to setup a domain through our hosting service or anything, or even a Buddycloud account prior to running their  Buddycloud-powered app for the first time, as it must be possible to create an account (registered in `buddycloud.org` on the fly) as they try it for the first time.
+> With both points in mind, once the developer has properly integrated the SDK into their project, they MUST be good to go: no need to setup a domain through our hosting service or anything, or even a Buddycloud account prior to running their  Buddycloud-powered app for the first time, as it must be possible to create an account (registered in `buddycloud.com` on the fly) as they try it for the first time.
 
 So without any further configuration, you can simply initialize the SDK using the `initialize()` call (it is recommended you place this call inside your main `Activity`'s `onCreate()` method):
 
@@ -101,7 +101,7 @@ public void onCreate() {
 }
 ```
 
-As stated before, if this is ommited, it defaults to `buddycloud.org`.
+As stated before, if this is ommited, it defaults to `buddycloud.com`.
 
 Another optional advanced feature is to hard-code the `BUDDYCLOUD_API_ENDPOINT` you will use (this is optional because the default one used is the `BUDDYCLOUD_DOMAIN`'s one, automagically discovered by the SDK):
 
@@ -109,7 +109,7 @@ Another optional advanced feature is to hard-code the `BUDDYCLOUD_API_ENDPOINT` 
 public void onCreate() {
     BuddycloudAPIEndpoint apiEndpoint = new BuddycloudAPIEndpoint();
     apiEndpoint.setProtocol("https");          //Default is: http
-    apiEndpoint.setHost("your.own.bc.domain"); //Default is: buddycloud.org
+    apiEndpoint.setHost("your.own.bc.domain"); //Default is: buddycloud.com
     apiEndpoint.setPort(443);                  //Default is: 80
     apiEndpoint.setPath("/api");               //Default is: /api
     BuddycloudConfiguration cfg = new BuddycloudConfiguration();
