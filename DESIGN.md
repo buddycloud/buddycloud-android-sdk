@@ -120,3 +120,14 @@ public void onCreate() {
 }
 ```
 The API Endpoint is the means through which the SDK will talk to Buddycloud so that you can add messaging to your apps.
+
+## Syncing data
+
+Push-to-pull
+
+What happens when:
+- offline (get a few messages) + fill in gaps
+- how to track gaps in the syncing?
+- how to get new messages when online?
+
+
