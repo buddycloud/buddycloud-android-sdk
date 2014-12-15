@@ -129,5 +129,6 @@ What happens when:
 - offline (get a few messages) + fill in gaps
 - how to track gaps in the syncing?
 - how to get new messages when online?
+- retractions?
 
 
