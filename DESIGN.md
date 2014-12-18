@@ -123,12 +123,17 @@ The API Endpoint is the means through which the SDK will talk to Buddycloud so t
 
 ## Syncing data
 
-Push-to-pull
+Potential problems
 
-What happens when:
-- offline (get a few messages) + fill in gaps
+Ways that things could screw up for the developer
+- database corruption
+- post from 2020-01-01 will mean that the client never syncs newer posts
+- loosing connectivity half way throgh a sync
+- very large database makes the app slow
+- two types of sync - posts that are stared client side & and posts that are loaded as you scroll through a channel
+- posts from channels you follow vs posts from channels you are just browsing
+- offline for a long time and trying to resync lots of posts. The sync never finises / the user kills the app and tries again.... and again...
 - how to track gaps in the syncing?
-- how to get new messages when online?
-- retractions?
-
+- do we fire the sync call for every push notification?
+- do we send notifications for every post on the server?
 
